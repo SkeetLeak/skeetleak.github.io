@@ -218,9 +218,16 @@
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                     Фотоархив
                 </button>
-                <button onclick="switchTab('audio')" id="btn-audio" class="tab-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-mono font-medium transition-all duration-200 flex items-center gap-3 text-gray-400 hover:text-gray-200 hover:bg-gray-800/40">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
-                    Голосовые
+                <button onclick="switchTab('audio')" id="btn-audio" class="tab-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-mono font-medium transition-all duration-200 flex items-center gap-3 text-red-500/80 hover:text-red-300 hover:bg-red-950/30 border-l-2 border-transparent">
+                    <svg class="w-4 h-4 text-accentRed shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9.5"></circle>
+                        <path d="M7.5 8.5l3.5 2.5"></path>
+                        <path d="M16.5 8.5l-3.5 2.5"></path>
+                        <circle cx="9" cy="12.5" r="1" fill="currentColor"></circle>
+                        <circle cx="15" cy="12.5" r="1" fill="currentColor"></circle>
+                        <path d="M8.5 17c1.5-1.5 5.5-1.5 7 0"></path>
+                    </svg>
+                    <span>Голосовые</span>
                 </button>
                 <button onclick="switchTab('videos')" id="btn-videos" class="tab-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-mono font-medium transition-all duration-200 flex items-center gap-3 text-gray-400 hover:text-gray-200 hover:bg-gray-800/40">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
@@ -540,9 +547,147 @@
             </div>
             <div id="section-audio" class="tab-section hidden flex flex-col gap-4 flex-1">
                 <div class="border-b border-gray-800 pb-3 mb-2 flex items-center justify-between">
-                    <h3 class="text-lg font-mono font-semibold text-white">Раздел III: Голосовые</h3>
+                    <h3 class="text-lg font-mono font-semibold text-white flex items-center gap-2">
+                        <svg class="w-5 h-5 text-accentRed" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9.5"></circle>
+                            <path d="M7.5 8.5l3.5 2.5"></path>
+                            <path d="M16.5 8.5l-3.5 2.5"></path>
+                            <circle cx="9" cy="12.5" r="1" fill="currentColor"></circle>
+                            <circle cx="15" cy="12.5" r="1" fill="currentColor"></circle>
+                            <path d="M8.5 17c1.5-1.5 5.5-1.5 7 0"></path>
+                        </svg>
+                        <span>Раздел III: Голосовые записи и перехваты</span>
+                    </h3>
+                    <span class="text-xs font-mono bg-red-950/40 text-red-400 border border-red-900/50 px-2.5 py-1 rounded">3 записи</span>
                 </div>
                 <div class="space-y-4">
+                    <!-- Track 1: Zloy((.ogg -->
+                    <div class="bg-gray-900/90 border-2 border-accentRed/50 rounded-lg p-5 flex flex-col gap-4 shadow-lg shadow-accentRed/5 relative overflow-hidden">
+                        <div class="flex items-start justify-between gap-3">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2.5 rounded-lg bg-accentRed/10 text-accentRed border border-accentRed/30 shadow-inner">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="9.5"></circle>
+                                        <path d="M7.5 8.5l3.5 2.5"></path>
+                                        <path d="M16.5 8.5l-3.5 2.5"></path>
+                                        <circle cx="9" cy="12.5" r="1" fill="currentColor"></circle>
+                                        <circle cx="15" cy="12.5" r="1" fill="currentColor"></circle>
+                                        <path d="M8.5 17c1.5-1.5 5.5-1.5 7 0"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs font-mono text-accentRed font-semibold">аудио/</span>
+                                        <span class="bg-accentRed/20 text-accentRed border border-accentRed/40 text-[9px] font-mono font-bold px-1.5 py-0.5 rounded uppercase">ЗЛОЙ</span>
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white font-mono mt-0.5">Zloy((.ogg</h4>
+                                    <p class="text-xs text-gray-400 font-mono mt-0.5">Тип: OGG Audio | Запись ярости</p>
+                                </div>
+                            </div>
+                            <div class="text-right font-mono text-xs text-gray-400">
+                                <span id="time-cur-1">0:00</span> / <span id="time-dur-1">0:00</span>
+                            </div>
+                        </div>
+                        <div class="h-16 bg-black/50 border border-red-950/60 rounded-lg flex items-end justify-between px-6 py-2 gap-[3px] relative overflow-hidden">
+                            <div class="absolute inset-0 flex items-end justify-between px-6 py-2 gap-[3px] z-0">
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 20%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 35%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 15%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 50%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 70%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 30%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 60%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 85%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 95%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 40%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 25%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 55%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 80%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 65%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 30%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 45%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 75%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 50%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 20%"></div>
+                                <div class="wave-bar-1 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 35%"></div>
+                            </div>
+                            <input type="range" id="progress-1" min="0" max="100" value="0" oninput="onAudioScrub(1)" class="absolute inset-x-0 bottom-0 w-full h-1 opacity-70 hover:opacity-100 accent-accentRed bg-gray-800 cursor-pointer z-10 transition-opacity">
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <button id="btn-play-1" onclick="toggleAudioTrack(1)" class="p-3 rounded-full bg-accentRed/15 hover:bg-accentRed/30 text-accentRed border border-accentRed/30 transition-all flex items-center justify-center cursor-pointer shadow-md shadow-accentRed/10">
+                                <svg class="w-6 h-6 icon-play" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                                <svg class="w-6 h-6 icon-pause hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>
+                            </button>
+                            <audio id="audio-1" data-track-id="1" class="custom-audio-elem" preload="metadata" onloadedmetadata="onAudioLoaded(1)" ontimeupdate="onAudioTimeUpdate(1)" onended="onAudioEnded(1)">
+                                <source src="assets/аудио/Zloy((.ogg" type="audio/ogg">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <!-- Track 2: Zloy((x2.ogg -->
+                    <div class="bg-gray-900/90 border-2 border-accentRed/50 rounded-lg p-5 flex flex-col gap-4 shadow-lg shadow-accentRed/5 relative overflow-hidden">
+                        <div class="flex items-start justify-between gap-3">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2.5 rounded-lg bg-accentRed/10 text-accentRed border border-accentRed/30 shadow-inner">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="9.5"></circle>
+                                        <path d="M7.5 8.5l3.5 2.5"></path>
+                                        <path d="M16.5 8.5l-3.5 2.5"></path>
+                                        <circle cx="9" cy="12.5" r="1" fill="currentColor"></circle>
+                                        <circle cx="15" cy="12.5" r="1" fill="currentColor"></circle>
+                                        <path d="M8.5 17c1.5-1.5 5.5-1.5 7 0"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs font-mono text-accentRed font-semibold">аудио/</span>
+                                        <span class="bg-accentRed/20 text-accentRed border border-accentRed/40 text-[9px] font-mono font-bold px-1.5 py-0.5 rounded uppercase">ЗЛОЙ X2</span>
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white font-mono mt-0.5">Zloy((x2.ogg</h4>
+                                    <p class="text-xs text-gray-400 font-mono mt-0.5">Тип: OGG Audio | Усиленная ярость</p>
+                                </div>
+                            </div>
+                            <div class="text-right font-mono text-xs text-gray-400">
+                                <span id="time-cur-2">0:00</span> / <span id="time-dur-2">0:00</span>
+                            </div>
+                        </div>
+                        <div class="h-16 bg-black/50 border border-red-950/60 rounded-lg flex items-end justify-between px-6 py-2 gap-[3px] relative overflow-hidden">
+                            <div class="absolute inset-0 flex items-end justify-between px-6 py-2 gap-[3px] z-0">
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 30%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 55%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 80%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 95%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 60%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 40%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 75%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 90%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 85%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 50%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 35%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 65%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 90%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 70%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 40%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 60%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 85%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 60%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 30%"></div>
+                                <div class="wave-bar-2 w-full bg-accentRed/60 rounded-t transition-all duration-100" style="height: 45%"></div>
+                            </div>
+                            <input type="range" id="progress-2" min="0" max="100" value="0" oninput="onAudioScrub(2)" class="absolute inset-x-0 bottom-0 w-full h-1 opacity-70 hover:opacity-100 accent-accentRed bg-gray-800 cursor-pointer z-10 transition-opacity">
+                        </div>
+                        <div class="flex items-center justify-between gap-4">
+                            <button id="btn-play-2" onclick="toggleAudioTrack(2)" class="p-3 rounded-full bg-accentRed/15 hover:bg-accentRed/30 text-accentRed border border-accentRed/30 transition-all flex items-center justify-center cursor-pointer shadow-md shadow-accentRed/10">
+                                <svg class="w-6 h-6 icon-play" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                                <svg class="w-6 h-6 icon-pause hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>
+                            </button>
+                            <audio id="audio-2" data-track-id="2" class="custom-audio-elem" preload="metadata" onloadedmetadata="onAudioLoaded(2)" ontimeupdate="onAudioTimeUpdate(2)" onended="onAudioEnded(2)">
+                                <source src="assets/аудио/Zloy((x2.ogg" type="audio/ogg">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <!-- Track 3: audio_2026-08-29_19-34-05.ogg -->
                     <div class="bg-gray-900 border border-gray-800 rounded-lg p-5 flex flex-col gap-4">
                         <div class="flex items-start justify-between gap-3">
                             <div class="flex items-center gap-3">
@@ -552,50 +697,49 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <span class="text-xs font-mono text-accentBlue">тряска дома/</span>
-                                    <h4 class="text-sm font-semibold text-white font-mono">audio_2026-08-29_19-34-05.ogg</h4>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs font-mono text-accentBlue font-semibold">тряска дома/</span>
+                                        <span class="bg-accentBlue/20 text-accentBlue border border-accentBlue/40 text-[9px] font-mono font-bold px-1.5 py-0.5 rounded uppercase">ПЕРЕХВАТ</span>
+                                    </div>
+                                    <h4 class="text-sm font-semibold text-white font-mono mt-0.5">audio_2026-08-29_19-34-05.ogg</h4>
                                     <p class="text-xs text-gray-500 font-mono mt-0.5">Тип: OGG Audio | Канал перехвата</p>
                                 </div>
                             </div>
                             <div class="text-right font-mono text-xs text-gray-500">
-                                <span id="current-time">0:00</span> / <span id="duration-time">0:00</span>
+                                <span id="time-cur-3">0:00</span> / <span id="time-dur-3">0:00</span>
                             </div>
                         </div>
                         <div class="h-16 bg-black/40 border border-gray-850 rounded-lg flex items-end justify-between px-6 py-2 gap-[3px] relative overflow-hidden">
                             <div class="absolute inset-0 flex items-end justify-between px-6 py-2 gap-[3px] z-0">
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 15%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 25%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 10%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 40%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 60%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 20%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 35%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 15%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 50%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 80%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 90%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 45%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 20%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 30%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 55%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 70%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 25%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 15%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 40%"></div>
-                                <div class="visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 30%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 15%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 25%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 10%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 40%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 60%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 20%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 35%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 15%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 50%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 80%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 90%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 45%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 20%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 30%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 55%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 70%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 25%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 15%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 40%"></div>
+                                <div class="wave-bar-3 visualizer-bar w-full bg-accentBlue/40 rounded-t transition-all duration-100" style="height: 30%"></div>
                             </div>
-                            <input type="range" id="audio-progress" min="0" max="100" value="0" class="absolute inset-x-0 bottom-0 w-full h-1 opacity-60 hover:opacity-100 accent-accentBlue bg-gray-800 cursor-pointer z-10 transition-opacity">
+                            <input type="range" id="progress-3" min="0" max="100" value="0" oninput="onAudioScrub(3)" class="absolute inset-x-0 bottom-0 w-full h-1 opacity-60 hover:opacity-100 accent-accentBlue bg-gray-800 cursor-pointer z-10 transition-opacity">
                         </div>
                         <div class="flex items-center justify-between gap-4">
-                            <button id="btn-play-pause" onclick="togglePlayPause()" class="p-3 rounded-full bg-accentBlue/10 hover:bg-accentBlue/20 text-accentBlue transition-colors flex items-center justify-center cursor-pointer">
-                                <svg id="icon-play" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z"></path>
-                                </svg>
-                                <svg id="icon-pause" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
-                                </svg>
+                            <button id="btn-play-3" onclick="toggleAudioTrack(3)" class="p-3 rounded-full bg-accentBlue/10 hover:bg-accentBlue/20 text-accentBlue transition-colors flex items-center justify-center cursor-pointer">
+                                <svg class="w-6 h-6 icon-play" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                                <svg class="w-6 h-6 icon-pause hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>
                             </button>
-                            <audio id="real-audio" preload="metadata" ontimeupdate="updateAudioProgress()" onended="audioEnded()">
+                            <audio id="audio-3" data-track-id="3" class="custom-audio-elem" preload="metadata" onloadedmetadata="onAudioLoaded(3)" ontimeupdate="onAudioTimeUpdate(3)" onended="onAudioEnded(3)">
                                 <source src="assets/тряска дома/audio_2026-08-29_19-34-05.ogg" type="audio/ogg">
                             </audio>
                         </div>
@@ -774,6 +918,20 @@
                                 <span class="text-accentBlue">audio_2026-08-29_19-34-05.ogg</span>
                                 <span class="text-xs text-gray-500">тряска дома/</span>
                             </div>
+                            <div class="px-4 py-2.5 flex justify-between text-sm font-mono bg-red-950/20 hover:bg-red-950/30 border-l-2 border-accentRed">
+                                <span class="text-accentRed font-semibold flex items-center gap-2">
+                                    <span class="text-[9px] bg-accentRed text-white px-1.5 py-0.5 rounded font-bold uppercase">ЗЛОЙ</span>
+                                    Zloy((.ogg
+                                </span>
+                                <span class="text-xs text-accentRed/80">аудио/</span>
+                            </div>
+                            <div class="px-4 py-2.5 flex justify-between text-sm font-mono bg-red-950/20 hover:bg-red-950/30 border-l-2 border-accentRed">
+                                <span class="text-accentRed font-semibold flex items-center gap-2">
+                                    <span class="text-[9px] bg-accentRed text-white px-1.5 py-0.5 rounded font-bold uppercase">ЗЛОЙ X2</span>
+                                    Zloy((x2.ogg
+                                </span>
+                                <span class="text-xs text-accentRed/80">аудио/</span>
+                            </div>
                             <div class="px-4 py-2.5 flex justify-between text-sm font-mono text-gray-300 hover:bg-gray-900/20">
                                 <span class="text-accentBlue">стиляга.jpg</span>
                                 <span class="text-xs text-gray-500">несорт/</span>
@@ -900,14 +1058,19 @@
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 if (btn.id === 'btn-love') {
                     btn.className = "tab-btn w-full text-left px-4 py-3 rounded-lg text-base font-mono font-bold transition-all duration-200 flex items-center gap-3.5 text-pink-500/70 hover:text-pink-300 hover:bg-pink-950/20 border-l-2 border-transparent";
+                } else if (btn.id === 'btn-audio') {
+                    btn.className = "tab-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-mono font-medium transition-all duration-200 flex items-center gap-3 text-red-500/70 hover:text-red-300 hover:bg-red-950/20 border-l-2 border-transparent";
                 } else {
-                    btn.className = "tab-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-mono font-medium transition-all duration-200 flex items-center gap-3 text-gray-400 hover:text-gray-200 hover:bg-gray-800/40";
+                    btn.className = "tab-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-mono font-medium transition-all duration-200 flex items-center gap-3 text-gray-400 hover:text-gray-200 hover:bg-gray-800/40 border-l-2 border-transparent";
                 }
             });
             const activeBtn = document.getElementById('btn-' + tabId);
             if (tabId === 'love') {
                 activeBtn.className = "tab-btn w-full text-left px-4 py-3 rounded-lg text-base font-mono font-bold transition-all duration-200 flex items-center gap-3.5 bg-pink-500/10 text-pink-400 border-l-2 border-pink-500";
                 startHearts();
+            } else if (tabId === 'audio') {
+                activeBtn.className = "tab-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-mono font-medium transition-all duration-200 flex items-center gap-3 bg-red-950/40 text-red-400 border-l-2 border-red-500 shadow-lg shadow-red-500/10";
+                stopHearts();
             } else {
                 activeBtn.className = "tab-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-mono font-medium transition-all duration-200 flex items-center gap-3 bg-accentBlue/10 text-accentBlue border-l-2 border-accentBlue";
                 stopHearts();
@@ -940,86 +1103,107 @@
             img.style.padding = '20px';
             img.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%23EF4444"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>`;
         }
-        const audio = document.getElementById('real-audio');
-        const playPauseBtn = document.getElementById('btn-play-pause');
-        const iconPlay = document.getElementById('icon-play');
-        const iconPause = document.getElementById('icon-pause');
-        const progress = document.getElementById('audio-progress');
-        const currentTimeEl = document.getElementById('current-time');
-        const durationTimeEl = document.getElementById('duration-time');
-        let audioIsPlaying = false;
-        let waveInterval = null;
-        if (audio) {
-            audio.addEventListener('loadedmetadata', () => {
-                durationTimeEl.textContent = formatTime(audio.duration);
-            });
-            if (audio.readyState >= 1) {
-                durationTimeEl.textContent = formatTime(audio.duration);
-            }
-        }
-        function togglePlayPause() {
-            if (!audio) return;
-            if (audio.paused) {
-                audio.play();
-                iconPlay.classList.add('hidden');
-                iconPause.classList.remove('hidden');
-                audioIsPlaying = true;
-                startWaveAnimation();
-            } else {
-                audio.pause();
-                iconPlay.classList.remove('hidden');
-                iconPause.classList.add('hidden');
-                audioIsPlaying = false;
-                stopWaveAnimation();
-            }
-        }
         function formatTime(secs) {
             if (isNaN(secs) || secs === Infinity) return "0:00";
             const minutes = Math.floor(secs / 60);
             const seconds = Math.floor(secs % 60);
             return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
         }
-        function updateAudioProgress() {
-            if (!audio || !audio.duration) return;
-            const pct = (audio.currentTime / audio.duration) * 100;
-            progress.value = pct;
-            currentTimeEl.textContent = formatTime(audio.currentTime);
+
+        const audioWaveIntervals = {};
+
+        function toggleAudioTrack(id) {
+            const currentAudio = document.getElementById('audio-' + id);
+            const playBtn = document.getElementById('btn-play-' + id);
+            if (!currentAudio || !playBtn) return;
+            const playIcon = playBtn.querySelector('.icon-play');
+            const pauseIcon = playBtn.querySelector('.icon-pause');
+            const allAudios = document.querySelectorAll('.custom-audio-elem');
+
+            if (currentAudio.paused) {
+                allAudios.forEach(a => {
+                    if (a !== currentAudio && !a.paused) {
+                        a.pause();
+                        const otherId = a.dataset.trackId;
+                        const otherBtn = document.getElementById('btn-play-' + otherId);
+                        if (otherBtn) {
+                            otherBtn.querySelector('.icon-play').classList.remove('hidden');
+                            otherBtn.querySelector('.icon-pause').classList.add('hidden');
+                        }
+                        stopAudioWave(otherId);
+                    }
+                });
+                currentAudio.play();
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+                startAudioWave(id);
+            } else {
+                currentAudio.pause();
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+                stopAudioWave(id);
+            }
         }
-        if (progress) {
-            progress.addEventListener('input', () => {
-                if (!audio || !audio.duration) return;
-                const targetTime = (progress.value / 100) * audio.duration;
-                audio.currentTime = targetTime;
-            });
-        }
-        function audioEnded() {
-            iconPlay.classList.remove('hidden');
-            iconPause.classList.add('hidden');
-            audioIsPlaying = false;
-            stopWaveAnimation();
-            progress.value = 0;
-            currentTimeEl.textContent = "0:00";
-        }
-        function startWaveAnimation() {
-            if (waveInterval) clearInterval(waveInterval);
-            const bars = document.querySelectorAll('.visualizer-bar');
-            waveInterval = setInterval(() => {
+
+        function startAudioWave(id) {
+            if (audioWaveIntervals[id]) clearInterval(audioWaveIntervals[id]);
+            const bars = document.querySelectorAll('.wave-bar-' + id);
+            audioWaveIntervals[id] = setInterval(() => {
                 bars.forEach(bar => {
                     const height = Math.random() * 85 + 10;
                     bar.style.height = height + '%';
                 });
             }, 100);
         }
-        function stopWaveAnimation() {
-            if (waveInterval) {
-                clearInterval(waveInterval);
-                waveInterval = null;
+
+        function stopAudioWave(id) {
+            if (audioWaveIntervals[id]) {
+                clearInterval(audioWaveIntervals[id]);
+                delete audioWaveIntervals[id];
             }
-            const bars = document.querySelectorAll('.visualizer-bar');
+            const bars = document.querySelectorAll('.wave-bar-' + id);
+            const staticHeights = [15, 25, 10, 40, 60, 20, 35, 15, 50, 80, 90, 45, 20, 30, 55, 70, 25, 15, 40, 30];
             bars.forEach((bar, idx) => {
-                const staticHeights = [15, 25, 10, 40, 60, 20, 35, 15, 50, 80, 90, 45, 20, 30, 55, 70, 25, 15, 40, 30];
-                bar.style.height = (staticHeights[idx] || 15) + '%';
+                bar.style.height = (staticHeights[idx % staticHeights.length] || 15) + '%';
             });
+        }
+
+        function onAudioTimeUpdate(id) {
+            const a = document.getElementById('audio-' + id);
+            const prog = document.getElementById('progress-' + id);
+            const cur = document.getElementById('time-cur-' + id);
+            if (!a || !a.duration) return;
+            prog.value = (a.currentTime / a.duration) * 100;
+            cur.textContent = formatTime(a.currentTime);
+        }
+
+        function onAudioLoaded(id) {
+            const a = document.getElementById('audio-' + id);
+            const dur = document.getElementById('time-dur-' + id);
+            if (a && dur) {
+                dur.textContent = formatTime(a.duration);
+            }
+        }
+
+        function onAudioScrub(id) {
+            const a = document.getElementById('audio-' + id);
+            const prog = document.getElementById('progress-' + id);
+            if (a && a.duration) {
+                a.currentTime = (prog.value / 100) * a.duration;
+            }
+        }
+
+        function onAudioEnded(id) {
+            const playBtn = document.getElementById('btn-play-' + id);
+            if (playBtn) {
+                playBtn.querySelector('.icon-play').classList.remove('hidden');
+                playBtn.querySelector('.icon-pause').classList.add('hidden');
+            }
+            stopAudioWave(id);
+            const prog = document.getElementById('progress-' + id);
+            const cur = document.getElementById('time-cur-' + id);
+            if (prog) prog.value = 0;
+            if (cur) cur.textContent = "0:00";
         }
     </script>
 </body>

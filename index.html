@@ -309,9 +309,10 @@
                                     <text x="300" y="252" text-anchor="middle" fill="#ffffff" class="font-mono text-[10px] font-bold">МИША (ОБЪЕКТ)</text>
                                     <text x="300" y="264" text-anchor="middle" fill="#3b82f6" class="font-mono text-[9px] text-accentBlue group-hover:underline">Портрет</text>
                                 </g>
-                                <g class="cursor-pointer group" onclick="openLightbox('assets/Семейные/мама.png', 'Наталия Николайчук (Мать)')">
+                                <g class="group">
                                     <circle cx="130" cy="90" r="28" fill="#1e293b" stroke="#3b82f6" stroke-width="2" class="network-node-circle transition-all duration-200" />
-                                    <image href="assets/Семейные/мама.png" x="105" y="65" width="50" height="50" clip-path="url(#clip-mom)"/>
+                                    <!-- User avatar icon -->
+                                    <path d="M130 80a5.5 5.5 0 100-11 5.5 5.5 0 000 11zm-8 16c0-4 3.5-6.5 8-6.5s8 2.5 8 6.5v1.5h-16v-1.5z" fill="#3b82f6" />
                                     <text x="130" y="132" text-anchor="middle" fill="#e2e8f0" class="font-mono text-[9px] font-bold">Наталия (Мать)</text>
                                     <text x="130" y="142" text-anchor="middle" fill="#9ca3af" class="font-mono text-[8px]">+380980775764</text>
                                 </g>
@@ -336,41 +337,25 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="bg-gray-900/70 border border-accentOrange/40 rounded-lg p-4 font-mono text-xs flex gap-4 shadow-lg shadow-accentOrange/5 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-24 h-24 bg-accentOrange/5 rounded-full blur-xl pointer-events-none"></div>
-                        <div class="flex-1 space-y-3 z-10">
-                            <h4 class="text-white font-semibold border-b border-gray-800 pb-2 mb-2 flex items-center justify-between">
-                                <span class="flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-accentOrange animate-pulse"></span>
-                                    СВЯЗАННЫЕ ЛИЦА (МАТЬ)
-                                </span>
-                                <span class="bg-accentOrange/20 text-accentOrange border border-accentOrange/40 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">ВАЖНО: МАМА</span>
-                            </h4>
-                            <div class="grid grid-cols-3 gap-2">
-                                <span class="text-gray-400 font-medium">ФИО матери:</span>
-                                <span class="text-accentOrange col-span-2 font-bold text-sm">Николайчук Наталия</span>
-                            </div>
-                            <div class="grid grid-cols-3 gap-2">
-                                <span class="text-gray-500">Дата рождения:</span>
-                                <span class="text-white col-span-2">10 октября 1980 г.</span>
-                            </div>
-                            <div class="grid grid-cols-3 gap-2 bg-accentOrange/10 p-2 rounded border border-accentOrange/20">
-                                <span class="text-accentOrange font-semibold flex items-center gap-1">
-                                    <svg class="w-3.5 h-3.5 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                                    Паспортные данные:
-                                </span>
-                                <span class="text-white col-span-2 font-bold">Пограничный паспорт выдан 5 февраля (в Киеве)</span>
-                            </div>
-                            <div class="grid grid-cols-3 gap-2">
-                                <span class="text-gray-500">Телефон:</span>
-                                <span class="text-accentBlue col-span-2 font-semibold">+380980775764</span>
-                            </div>
+                    <div class="bg-gray-900/60 border border-gray-800 rounded-lg p-4 font-mono text-xs space-y-3">
+                        <h4 class="text-white font-semibold border-b border-gray-800 pb-2 mb-2 flex items-center justify-between">
+                            <span>СВЯЗАННЫЕ ЛИЦА (МАТЬ)</span>
+                        </h4>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="text-gray-500">ФИО матери:</span>
+                            <span class="text-white col-span-2 font-semibold">Николайчук Наталия</span>
                         </div>
-                        <div class="w-20 sm:w-24 shrink-0 flex flex-col items-center justify-center z-10">
-                            <div class="w-20 h-28 sm:w-24 sm:h-32 rounded border-2 border-accentOrange/60 overflow-hidden bg-black group cursor-pointer shadow-md shadow-accentOrange/10" onclick="openLightbox('assets/Семейные/мама.png', 'Наталия Николайчук (Мать - Паспорт)')">
-                                <img src="assets/Семейные/мама.png" alt="Наталия" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" onerror="handleImageError(this)">
-                            </div>
-                            <span class="text-[9px] text-accentOrange bg-accentOrange/10 border border-accentOrange/30 font-bold mt-1.5 uppercase text-center block px-1.5 py-0.5 rounded w-full">Паспорт</span>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="text-gray-500">Дата рождения:</span>
+                            <span class="text-white col-span-2">10 октября 1980 г.</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="text-gray-500">Паспортные данные:</span>
+                            <span class="text-white col-span-2">Пограничный паспорт выдан 5 февраля (в Киеве)</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="text-gray-500">Телефон:</span>
+                            <span class="text-accentBlue col-span-2 font-semibold">+380980775764</span>
                         </div>
                     </div>
                     <div class="bg-gray-900/60 border border-gray-800 rounded-lg p-4 font-mono text-xs flex gap-4">
@@ -433,18 +418,6 @@
                         <div class="p-3">
                             <span class="text-xs font-mono text-accentBlue block">Семейные/</span>
                             <p class="text-sm font-semibold text-white truncate mt-1">image.png</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-900 border-2 border-accentOrange/60 rounded-lg overflow-hidden group cursor-pointer flex flex-col relative shadow-lg shadow-accentOrange/5" onclick="openLightbox('assets/Семейные/мама.png', 'Мама')">
-                        <div class="absolute top-2 right-2 bg-accentOrange text-black font-mono font-bold text-[9px] px-2 py-0.5 rounded shadow z-10 uppercase">
-                            ВАЖНО: МАМА
-                        </div>
-                        <div class="h-40 overflow-hidden bg-black flex items-center justify-center">
-                            <img src="assets/Семейные/мама.png" alt="Мама" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="handleImageError(this)">
-                        </div>
-                        <div class="p-3 bg-accentOrange/5">
-                            <span class="text-xs font-mono text-accentOrange block">Семейные/</span>
-                            <p class="text-sm font-bold text-white truncate mt-1">мама.png</p>
                         </div>
                     </div>
                     <div class="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden group cursor-pointer flex flex-col" onclick="openLightbox('assets/Хавает бутерброд с пола/image.png', 'Хавает бутерброд с пола')">
@@ -930,13 +903,6 @@
                             <div class="px-4 py-2.5 flex justify-between text-sm font-mono text-gray-300 hover:bg-gray-900/20">
                                 <span class="text-accentBlue">image.png</span>
                                 <span class="text-xs text-gray-500">Семейные/</span>
-                            </div>
-                            <div class="px-4 py-2.5 flex justify-between text-sm font-mono bg-accentOrange/5 hover:bg-accentOrange/10 border-l-2 border-accentOrange">
-                                <span class="text-accentOrange font-semibold flex items-center gap-2">
-                                    <span class="text-[9px] bg-accentOrange text-black px-1.5 py-0.5 rounded font-bold">ВАЖНО</span>
-                                    мама.png (Мать)
-                                </span>
-                                <span class="text-xs text-accentOrange/80">Семейные/</span>
                             </div>
                             <div class="px-4 py-2.5 flex justify-between text-sm font-mono text-gray-300 hover:bg-gray-900/20">
                                 <span class="text-accentBlue">image.png</span>

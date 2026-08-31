@@ -1007,6 +1007,13 @@
                                 <span class="text-pink-400">image.png</span>
                                 <span class="text-xs text-pink-500/50">150кг любви признание/</span>
                             </div>
+                            <div class="px-4 py-2.5 flex justify-between text-sm font-mono bg-pink-950/20 hover:bg-pink-950/30 border-l-2 border-pink-500">
+                                <span class="text-pink-400 font-semibold flex items-center gap-2">
+                                    <span class="text-[9px] bg-pink-500 text-black px-1.5 py-0.5 rounded font-bold uppercase">САУНДТРЕК</span>
+                                    serebro-mezhdu-nami-ljubov.mp3
+                                </span>
+                                <span class="text-xs text-pink-400/80">музыка/</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1014,8 +1021,104 @@
             <div id="section-love" class="tab-section hidden flex flex-col gap-4 flex-1 relative overflow-hidden min-h-[500px]">
                 <div id="hearts-container" class="absolute inset-0 pointer-events-none z-0"></div>
                 <div class="border-b border-pink-900/50 pb-3 mb-2 flex items-center justify-between z-10">
-                    <h3 class="text-lg font-mono font-semibold text-pink-400">Раздел VI: 150кг Любви</h3>
+                    <h3 class="text-lg font-mono font-semibold text-pink-400 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-pink-500 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        <span>Раздел VI: 150кг Любви</span>
+                    </h3>
+                    <div class="flex items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-mono bg-pink-950/60 text-pink-300 border border-pink-500/30 px-3 py-1 rounded-full shadow-sm shadow-pink-500/10">
+                            <span class="w-2 h-2 rounded-full bg-pink-500 animate-ping"></span>
+                            Саундтрек
+                        </span>
+                    </div>
                 </div>
+
+                <!-- Музыкальный плеер саундтрека любви -->
+                <div class="love-card rounded-xl p-5 border border-pink-500/30 bg-gradient-to-r from-pink-950/40 via-purple-950/20 to-black/60 shadow-xl shadow-pink-500/10 z-10 flex flex-col gap-4 relative backdrop-blur-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-12 h-12 rounded-xl bg-pink-500/20 border border-pink-500/40 flex items-center justify-center text-pink-400 shrink-0 shadow-lg shadow-pink-500/20">
+                                <svg class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs font-mono text-pink-400 font-semibold">музыка/</span>
+                                    <span class="bg-pink-500/20 text-pink-300 border border-pink-500/40 text-[9px] font-mono font-bold px-1.5 py-0.5 rounded uppercase">САУНДТРЕК</span>
+                                </div>
+                                <h4 class="text-sm font-bold text-white font-mono mt-0.5 flex items-center gap-2">
+                                    <span>SEREBRO — Между нами любовь</span>
+                                </h4>
+                                <p class="text-xs text-pink-300/70 font-mono mt-0.5" id="love-music-status">Фоновое сопровождение активно</p>
+                            </div>
+                        </div>
+
+                        <!-- Контроллеры громкости и воспроизведения -->
+                        <div class="flex items-center gap-3 self-end sm:self-center">
+                            <!-- Регулятор громкости -->
+                            <div class="flex items-center gap-2 bg-black/50 px-3 py-1.5 rounded-lg border border-pink-500/30">
+                                <button onclick="toggleLoveMute()" id="btn-love-mute" class="text-pink-400 hover:text-pink-200 transition-colors p-1" title="Включить/выключить звук">
+                                    <svg id="icon-vol-up" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z"/>
+                                    </svg>
+                                    <svg id="icon-vol-mute" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15zM17 14l4-4m0 0l-4-4m4 4H15" />
+                                    </svg>
+                                </button>
+                                <input type="range" id="love-volume-slider" min="0" max="1" step="0.01" value="0.7" oninput="setLoveVolume(this.value)" class="w-20 sm:w-28 h-1.5 bg-pink-950 rounded-lg accent-pink-500 cursor-pointer">
+                                <span id="love-volume-text" class="text-[11px] font-mono text-pink-300 w-8 text-right font-bold">70%</span>
+                            </div>
+
+                            <!-- Кнопка Play / Pause -->
+                            <button id="btn-love-play-pause" onclick="toggleLoveAudio()" class="p-3 rounded-full bg-pink-500 hover:bg-pink-400 text-black font-bold transition-all transform hover:scale-105 shadow-lg shadow-pink-500/30 flex items-center justify-center cursor-pointer">
+                                <svg id="love-icon-play" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                                <svg id="love-icon-pause" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Эквалайзер и таймлайн -->
+                    <div class="h-12 bg-black/60 border border-pink-950/80 rounded-lg flex items-end justify-between px-4 py-1.5 gap-[2px] relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-end justify-between px-4 py-1.5 gap-[2px] z-0">
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 35%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 55%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 75%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 90%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 60%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 40%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 85%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 95%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 70%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 50%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 80%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 100%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 65%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 45%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 85%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 70%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 30%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 60%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 90%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 75%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 50%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 35%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 65%"></div>
+                            <div class="love-wave-bar w-full bg-gradient-to-t from-pink-600 to-pink-400 rounded-t transition-all duration-100" style="height: 40%"></div>
+                        </div>
+                        <input type="range" id="love-progress" min="0" max="100" value="0" oninput="onLoveAudioScrub()" class="absolute inset-x-0 bottom-0 w-full h-1 opacity-70 hover:opacity-100 accent-pink-500 bg-pink-950 cursor-pointer z-10 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-between text-xs font-mono text-pink-300/80 px-1">
+                        <span id="love-time-cur">0:00</span>
+                        <span id="love-time-dur">0:00</span>
+                    </div>
+
+                    <!-- Аудио-тег саундтрека -->
+                    <audio id="audio-love-bg" preload="auto" loop onloadedmetadata="onLoveAudioLoaded()" ontimeupdate="onLoveAudioTimeUpdate()">
+                        <source src="assets/музыка/serebro-mezhdu-nami-ljubov.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
                 <div class="love-card rounded-xl p-6 flex flex-col items-center justify-center gap-6 z-10 relative">
                     <div class="text-center max-w-md">
                         <span class="inline-block text-[10px] uppercase font-mono tracking-widest bg-pink-500/10 text-pink-400 px-3 py-1 rounded-full mb-3">Признание</span>
@@ -1099,12 +1202,15 @@
             if (tabId === 'love') {
                 activeBtn.className = "tab-btn w-full text-left px-4 py-3 rounded-lg text-base font-mono font-bold transition-all duration-200 flex items-center gap-3.5 bg-pink-500/10 text-pink-400 border-l-2 border-pink-500";
                 startHearts();
+                startLoveAudio();
             } else if (tabId === 'audio') {
                 activeBtn.className = "tab-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-mono font-medium transition-all duration-200 flex items-center gap-3 bg-red-950/40 text-red-400 border-l-2 border-red-500 shadow-lg shadow-red-500/10";
                 stopHearts();
+                stopLoveAudio();
             } else {
                 activeBtn.className = "tab-btn w-full text-left px-4 py-2.5 rounded-lg text-sm font-mono font-medium transition-all duration-200 flex items-center gap-3 bg-accentBlue/10 text-accentBlue border-l-2 border-accentBlue";
                 stopHearts();
+                stopLoveAudio();
             }
         }
         window.addEventListener('DOMContentLoaded', () => {
@@ -1141,6 +1247,158 @@
             return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
         }
 
+        let loveAudio = null;
+        let loveWaveInterval = null;
+        let prevLoveVolume = 0.7;
+
+        function getLoveAudio() {
+            if (!loveAudio) {
+                loveAudio = document.getElementById('audio-love-bg');
+                if (loveAudio) {
+                    loveAudio.volume = 0.7;
+                }
+            }
+            return loveAudio;
+        }
+
+        function startLoveAudio() {
+            const a = getLoveAudio();
+            if (!a) return;
+            document.querySelectorAll('.custom-audio-elem').forEach(track => {
+                if (!track.paused) {
+                    track.pause();
+                    const otherId = track.dataset.trackId;
+                    const otherBtn = document.getElementById('btn-play-' + otherId);
+                    if (otherBtn) {
+                        otherBtn.querySelector('.icon-play').classList.remove('hidden');
+                        otherBtn.querySelector('.icon-pause').classList.add('hidden');
+                    }
+                    stopAudioWave(otherId);
+                }
+            });
+
+            a.play().then(() => {
+                updateLovePlayState(true);
+            }).catch(err => {
+                console.log("Audio playback waiting for interaction", err);
+                updateLovePlayState(false);
+            });
+        }
+
+        function stopLoveAudio() {
+            const a = getLoveAudio();
+            if (!a) return;
+            a.pause();
+            updateLovePlayState(false);
+        }
+
+        function toggleLoveAudio() {
+            const a = getLoveAudio();
+            if (!a) return;
+            if (a.paused) {
+                startLoveAudio();
+            } else {
+                stopLoveAudio();
+            }
+        }
+
+        function updateLovePlayState(isPlaying) {
+            const playIcon = document.getElementById('love-icon-play');
+            const pauseIcon = document.getElementById('love-icon-pause');
+            const statusText = document.getElementById('love-music-status');
+            if (isPlaying) {
+                if (playIcon) playIcon.classList.add('hidden');
+                if (pauseIcon) pauseIcon.classList.remove('hidden');
+                if (statusText) statusText.textContent = "Воспроизведение саундтрека...";
+                startLoveWave();
+            } else {
+                if (playIcon) playIcon.classList.remove('hidden');
+                if (pauseIcon) pauseIcon.classList.add('hidden');
+                if (statusText) statusText.textContent = "Саундтрек на паузе";
+                stopLoveWave();
+            }
+        }
+
+        function setLoveVolume(val) {
+            const a = getLoveAudio();
+            val = parseFloat(val);
+            if (a) a.volume = val;
+            const text = document.getElementById('love-volume-text');
+            if (text) text.textContent = Math.round(val * 100) + '%';
+            const iconUp = document.getElementById('icon-vol-up');
+            const iconMute = document.getElementById('icon-vol-mute');
+            if (val === 0) {
+                if (iconUp) iconUp.classList.add('hidden');
+                if (iconMute) iconMute.classList.remove('hidden');
+            } else {
+                if (iconUp) iconUp.classList.remove('hidden');
+                if (iconMute) iconMute.classList.add('hidden');
+                prevLoveVolume = val;
+            }
+        }
+
+        function toggleLoveMute() {
+            const a = getLoveAudio();
+            if (!a) return;
+            const slider = document.getElementById('love-volume-slider');
+            if (a.volume > 0) {
+                prevLoveVolume = a.volume;
+                if (slider) slider.value = 0;
+                setLoveVolume(0);
+            } else {
+                const target = prevLoveVolume || 0.7;
+                if (slider) slider.value = target;
+                setLoveVolume(target);
+            }
+        }
+
+        function onLoveAudioLoaded() {
+            const a = getLoveAudio();
+            if (!a) return;
+            const dur = document.getElementById('love-time-dur');
+            if (dur) dur.textContent = formatTime(a.duration);
+        }
+
+        function onLoveAudioTimeUpdate() {
+            const a = getLoveAudio();
+            if (!a || !a.duration) return;
+            const prog = document.getElementById('love-progress');
+            const cur = document.getElementById('love-time-cur');
+            if (prog) prog.value = (a.currentTime / a.duration) * 100;
+            if (cur) cur.textContent = formatTime(a.currentTime);
+        }
+
+        function onLoveAudioScrub() {
+            const a = getLoveAudio();
+            const prog = document.getElementById('love-progress');
+            if (a && a.duration && prog) {
+                a.currentTime = (prog.value / 100) * a.duration;
+            }
+        }
+
+        function startLoveWave() {
+            if (loveWaveInterval) clearInterval(loveWaveInterval);
+            const bars = document.querySelectorAll('.love-wave-bar');
+            loveWaveInterval = setInterval(() => {
+                bars.forEach(bar => {
+                    const height = Math.random() * 85 + 15;
+                    bar.style.height = height + '%';
+                });
+            }, 100);
+        }
+
+        function stopLoveWave() {
+            if (loveWaveInterval) {
+                clearInterval(loveWaveInterval);
+                loveWaveInterval = null;
+            }
+            const bars = document.querySelectorAll('.love-wave-bar');
+            const staticHeights = [35, 55, 75, 90, 60, 40, 85, 95, 70, 50, 80, 100, 65, 45, 85, 70, 30, 60, 90, 75, 50, 35, 65, 40];
+            bars.forEach((bar, idx) => {
+                bar.style.height = (staticHeights[idx % staticHeights.length] || 35) + '%';
+            });
+        }
+
         const audioWaveIntervals = {};
 
         function toggleAudioTrack(id) {
@@ -1152,6 +1410,7 @@
             const allAudios = document.querySelectorAll('.custom-audio-elem');
 
             if (currentAudio.paused) {
+                stopLoveAudio();
                 allAudios.forEach(a => {
                     if (a !== currentAudio && !a.paused) {
                         a.pause();
